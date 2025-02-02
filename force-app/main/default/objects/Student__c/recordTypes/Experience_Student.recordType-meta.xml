@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Experience_Student</fullName>
+    <active>true</active>
+    <label>Experience Student</label>
+    <picklistValues>
+        <picklist>Course_Opted__c</picklist>
+        <values>
+            <fullName>Adv Java</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amazon AWS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android App Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C%2B%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core Java</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERN Stack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Python</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce Developer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hobbies__c</picklist>
+        <values>
+            <fullName>Crafting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dancing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Painting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Playing Cricket</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Playing Guitar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travelling</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stream_Opted__c</picklist>
+        <values>
+            <fullName>C%2B%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core Programming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Java</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Student_State__c</picklist>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bihar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maharashtra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Bengal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Technology_Domain__c</picklist>
+        <values>
+            <fullName>Android</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERN Stack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

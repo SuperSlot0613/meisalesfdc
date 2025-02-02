@@ -1,0 +1,7 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:pageBlock >
+      <apex:pageMessage summary="Validation messages appear in the Page messages component." severity="info" strength="3"></apex:pageMessage>
+  </apex:pageBlock>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

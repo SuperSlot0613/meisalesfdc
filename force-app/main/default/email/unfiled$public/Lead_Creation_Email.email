@@ -1,0 +1,7 @@
+Dear {!Lead.Salutation} {!Lead.Name},
+
+On our System one lead is created. The lead related to {!Lead.Product__c}.
+This is lead id {!Lead.Lead_ID__c} for your future communication.
+
+Thanks Regards,
+FInvoice

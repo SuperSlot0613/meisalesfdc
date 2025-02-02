@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_is_req_if_filling_out_billing_coun</fullName>
+    <active>true</active>
+    <description>The Level field must be entered if the user fills out the billing country.</description>
+    <errorConditionFormula>AND(
+ NOT(
+   ISBLANK( MailingCountry )
+ ),ISBLANK(  MobilePhone ),
+  MailingCountry = &quot;India&quot; 
+)</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>You must fill out the mobile field if you are filling out the billing.</errorMessage>
+</ValidationRule>

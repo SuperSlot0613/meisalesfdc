@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contacted Once</fullName>
+                <default>true</default>
+                <label>Contacted Once</label>
+            </value>
+            <value>
+                <fullName>Contacted Twice</fullName>
+                <default>false</default>
+                <label>Contacted Twice</label>
+            </value>
+            <value>
+                <fullName>In Review</fullName>
+                <default>false</default>
+                <label>In Review</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Pending going to legal</fullName>
+                <default>false</default>
+                <label>Pending going to legal</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Draft</controllingFieldValue>
+            <valueName>In Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Draft</controllingFieldValue>
+            <valueName>Pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overdue</controllingFieldValue>
+            <valueName>Contacted Once</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overdue</controllingFieldValue>
+            <valueName>Contacted Twice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overdue</controllingFieldValue>
+            <valueName>Pending going to legal</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Student</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Students</value>
+    </caseValues>
+    <layouts>
+        <layout>Copy of Experience Student Page Layout</layout>
+        <sections>
+            <label><!-- Addition Info --></label>
+            <section>Addition Info</section>
+        </sections>
+        <sections>
+            <label><!-- Contect Info --></label>
+            <section>Contect Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fee Related Info --></label>
+            <section>Fee Related Info</section>
+        </sections>
+        <sections>
+            <label><!-- Job Currently In --></label>
+            <section>Job Currently In</section>
+        </sections>
+        <sections>
+            <label><!-- Rating  Related Info --></label>
+            <section>Rating  Related Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Experience Student Page Layout</layout>
+        <sections>
+            <label><!-- Addition Info --></label>
+            <section>Addition Info</section>
+        </sections>
+        <sections>
+            <label><!-- Contect Info --></label>
+            <section>Contect Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fee Related Info --></label>
+            <section>Fee Related Info</section>
+        </sections>
+        <sections>
+            <label><!-- Job Currently In --></label>
+            <section>Job Currently In</section>
+        </sections>
+        <sections>
+            <label><!-- Rating  Related Info --></label>
+            <section>Rating  Related Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fresher Student Page Layout</layout>
+        <sections>
+            <label><!-- Addition Info --></label>
+            <section>Addition Info</section>
+        </sections>
+        <sections>
+            <label><!-- Contect Info --></label>
+            <section>Contect Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fee Related Info --></label>
+            <section>Fee Related Info</section>
+        </sections>
+        <sections>
+            <label><!-- Rating  Related Info --></label>
+            <section>Rating  Related Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Graduate Student Page Layout</layout>
+        <sections>
+            <label><!-- Addition Info --></label>
+            <section>Addition Info</section>
+        </sections>
+        <sections>
+            <label><!-- Contect Info --></label>
+            <section>Contect Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fee Related Info --></label>
+            <section>Fee Related Info</section>
+        </sections>
+        <sections>
+            <label><!-- Rating  Related Info --></label>
+            <section>Rating  Related Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Student Layout</layout>
+        <sections>
+            <label><!-- Addition Info --></label>
+            <section>Addition Info</section>
+        </sections>
+        <sections>
+            <label><!-- Contect Info --></label>
+            <section>Contect Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fee Related Info --></label>
+            <section>Fee Related Info</section>
+        </sections>
+        <sections>
+            <label><!-- Rating  Related Info --></label>
+            <section>Rating  Related Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Student Layout 2</layout>
+        <sections>
+            <label><!-- Addition Info --></label>
+            <section>Addition Info</section>
+        </sections>
+        <sections>
+            <label><!-- Contect Info --></label>
+            <section>Contect Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Experience Student --></label>
+        <name>Experience_Student</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Fresher Student --></label>
+        <name>Fresher_Student</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Graduate Student --></label>
+        <name>Graduate_Student</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Registration Fees cannot be less then 5000 --></errorMessage>
+        <name>RegFees_Check</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Gather_student_information</name>
+        <subject><!-- Gather student information --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

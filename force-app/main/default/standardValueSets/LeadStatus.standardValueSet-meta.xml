@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact Center</fullName>
+        <default>false</default>
+        <label>Contact Center</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales</fullName>
+        <default>false</default>
+        <label>Sales</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Credit/Ops</fullName>
+        <default>false</default>
+        <label>Credit/Ops</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Dropped</fullName>
+        <default>false</default>
+        <label>Dropped</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>QDE</fullName>
+        <default>false</default>
+        <label>QDE</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>DDE</fullName>
+        <default>false</default>
+        <label>DDE</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>VKYC</fullName>
+        <default>false</default>
+        <label>VKYC</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>FI Curing</fullName>
+        <default>false</default>
+        <label>FI Curing</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>FD Creation</fullName>
+        <default>false</default>
+        <label>FD Creation</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Converted</fullName>
+        <default>false</default>
+        <label>Converted</label>
+        <converted>false</converted>
+    </standardValue>
+</StandardValueSet>

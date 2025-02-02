@@ -1,0 +1,5 @@
+<aura:component >
+	This file include other components
+    <c:helloHTML/>
+    <c:helloAttribute whom="Component composition"/>
+</aura:component>

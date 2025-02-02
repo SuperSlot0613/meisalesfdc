@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub Status --></label>
+    <name>Sub_Status__c</name>
+    <picklistValues>
+        <masterLabel>Contacted Once</masterLabel>
+        <translation><!-- Contacted Once --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contacted Twice</masterLabel>
+        <translation><!-- Contacted Twice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Review</masterLabel>
+        <translation><!-- In Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending</masterLabel>
+        <translation><!-- Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending going to legal</masterLabel>
+        <translation><!-- Pending going to legal --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

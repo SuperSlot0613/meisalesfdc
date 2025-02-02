@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Document Type --></label>
+    <name>Document_Type__c</name>
+    <picklistValues>
+        <masterLabel>--None--</masterLabel>
+        <translation><!-- - - None- -  --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aadhaar</masterLabel>
+        <translation><!-- Aadhaar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CKYC No</masterLabel>
+        <translation><!-- CKYC No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Driving License</masterLabel>
+        <translation><!-- Driving License --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pan</masterLabel>
+        <translation><!-- Pan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passport</masterLabel>
+        <translation><!-- Passport --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voter Id</masterLabel>
+        <translation><!-- Voter Id --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

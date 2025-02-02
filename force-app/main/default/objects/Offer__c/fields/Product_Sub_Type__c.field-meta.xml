@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Sub_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Sub Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+                <label>Home Loan</label>
+            </value>
+            <value>
+                <fullName>Home Loan Top Up</fullName>
+                <default>false</default>
+                <label>Home Loan Top Up</label>
+            </value>
+            <value>
+                <fullName>Cross sell HL</fullName>
+                <default>false</default>
+                <label>Cross sell HL</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SEPL</controllingFieldValue>
+            <controllingFieldValue>Home Loan</controllingFieldValue>
+            <controllingFieldValue>Personal Loan</controllingFieldValue>
+            <controllingFieldValue>LAP</controllingFieldValue>
+            <valueName>Home Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SEPL</controllingFieldValue>
+            <controllingFieldValue>Home Loan</controllingFieldValue>
+            <controllingFieldValue>Personal Loan</controllingFieldValue>
+            <controllingFieldValue>LAP</controllingFieldValue>
+            <valueName>Home Loan Top Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SEPL</controllingFieldValue>
+            <controllingFieldValue>Home Loan</controllingFieldValue>
+            <controllingFieldValue>Personal Loan</controllingFieldValue>
+            <controllingFieldValue>LAP</controllingFieldValue>
+            <valueName>Cross sell HL</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This Email will trigger when lead is created</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Lead Creation Email</name>
+    <style>none</style>
+    <subject>Congratulations.. !! On your name lead is created {!Lead.Id}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

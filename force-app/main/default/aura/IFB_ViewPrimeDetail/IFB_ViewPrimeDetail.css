@@ -1,0 +1,54 @@
+.THIS .header1{
+    background-color: #9c1d27;
+    width:98.5%;
+    margin-left:10px;
+    color: white;
+    font-weight: 600;
+}
+
+.THIS .slds-form__row div{
+   padding-top: 4px;
+}
+
+.THIS main_box{
+    height:100% !important;
+}
+
+.THIS .main_box{
+    background-color: white !important;
+}
+
+.THIS .card_detail_value{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+
+.THIS .common_font{
+    font-size:12px;
+    font-weight:400
+}
+
+.THIS .header2 {
+    width: 97%;
+    background-color: #9C1D27;
+    margin-left:10px;
+}
+
+.THIS .slds-form-element__static{
+    width:auto;
+}  
+
+.THIS label{
+    margin-left:10px;
+    text-overflow: inherit;
+    white-space: normal;
+    padding-right: initial;
+    overflow: visible;
+    font-size: var(--lwc-fontWeightRegular,400);
+    word-wrap: break-word;
+    display: inherit;
+    min-width:12rem;
+}

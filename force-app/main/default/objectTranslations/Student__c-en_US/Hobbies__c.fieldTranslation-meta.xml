@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Hobbies --></label>
+    <name>Hobbies__c</name>
+    <picklistValues>
+        <masterLabel>Crafting</masterLabel>
+        <translation><!-- Crafting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dancing</masterLabel>
+        <translation><!-- Dancing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Painting</masterLabel>
+        <translation><!-- Painting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Playing Cricket</masterLabel>
+        <translation><!-- Playing Cricket --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Playing Guitar</masterLabel>
+        <translation><!-- Playing Guitar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reading</masterLabel>
+        <translation><!-- Reading --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Singing</masterLabel>
+        <translation><!-- Singing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Travelling</masterLabel>
+        <translation><!-- Travelling --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

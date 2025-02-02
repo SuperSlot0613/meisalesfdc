@@ -1,0 +1,37 @@
+<template>
+    <div class="slds-box">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_6-of-12">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-47">
+                        <abbr class="slds-required" title="required">* </abbr>Name</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" id="text-input-id-47" placeholder="Placeholder text…" required=""
+                            class="slds-input" />
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-89">
+                        <abbr class="slds-required" title="required">* </abbr>Email</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" id="text-input-id-89" placeholder="Placeholder text…" required=""
+                            class="slds-input" />
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_12-of-12 slds-align_absolute-center">
+                <button class="slds-button slds-button_brand">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div onsend={handlechil}>
+        <c-list-Child-Component></c-list-Child-Component>
+    </div>
+    <lightning-card  title="Message come from chile component">
+        <p class="slds-p-horizontal_small">{chilemessage}</p>
+    </lightning-card>
+</template>

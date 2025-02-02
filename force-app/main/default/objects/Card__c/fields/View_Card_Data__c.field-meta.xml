@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>View_Card_Data__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL($User.UserType ,&apos;Standard&apos;) , HYPERLINK(&quot;/lightning/cmp/c__IFB_ViewPrimeDetail?c__recordId=&quot;+Id+&quot;&amp;c__sn=&quot;+Name,&quot;View Card Data&quot;,&quot;_self&quot;), IF(ISPICKVAL( $User.UserType ,&apos;PowerPartner&apos;), HYPERLINK(&quot;/MyFirstBuddy/s/creditcarddetails?c__recordId=&quot;+Id+&quot;&amp;c__sn=&quot;+Name,&quot;View Card Data&quot;,&quot;_self&quot;),&apos;&apos;))</formula>
+    <label>View Card Data</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

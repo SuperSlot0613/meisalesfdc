@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Drop2hCampaignTime</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Drop2hCampaignTime</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>Drop4hCampaignTime</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Drop4hCampaignTime</shortDescription>
+        <value>240</value>
+    </labels>
+    <labels>
+        <fullName>DropIn2hCampaignList</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DropIn2hCampaignList</shortDescription>
+        <value>CC_SAURABH_TEST,</value>
+    </labels>
+    <labels>
+        <fullName>DropIn4hCampaignList</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DropIn4hCampaignList</shortDescription>
+        <value>CC_SAURABH_RUPAY,</value>
+    </labels>
+    <labels>
+        <fullName>MFWC</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MFWC</shortDescription>
+        <value>Master Infinite FIRST Wealth Card,Master Platinum FIRST Classic Card</value>
+    </labels>
+    <labels>
+        <fullName>VFWC</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VFWC</shortDescription>
+        <value>Visa Infinite FIRST Wealth Card,Visa Platinum FIRST Classic Card</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,4 @@
+Please note that your opportunity '{!Opportunity.Name}' has a close date of tomorrow.
+
+Access Opp:
+https://medisale-dev-ed.develop.lightning.force.com/{!Opportunity.Id}

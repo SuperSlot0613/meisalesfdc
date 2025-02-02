@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Email with information about Opp that has a close date tommorrow</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notify Opp Close date</name>
+    <style>none</style>
+    <subject>ALERT: Opp {!Opportunity.Name} Close Date is tommorrow.</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

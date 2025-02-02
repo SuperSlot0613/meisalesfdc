@@ -1,0 +1,265 @@
+<aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:isUrlAddressable" access="global" >
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="cardserno" type="String"/>
+    <aura:attribute name="CurrenteUser" type="Object"/>
+    <aura:attribute name="error_disply" type="Boolean" default="false"/>
+    <aura:attribute name="blnSpinnerShow" type="Boolean" default="false"/>
+    <aura:attribute name="errormsg" type="String" default=""/>
+    <force:recordData recordId="{!$SObjestType.CurrentUser.Id}" fields="Profile.Name" targetFields="{!v.CurrenteUser}"/>
+
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <aura:html tag="style">.toastMessage.forceActionsText{
+        white-space : pre-line !important;
+        }</aura:html>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+
+    <div class="slds-m-arount_small sldc-box slds-theme_default main_box">
+        <div class="slds-form--horizontal">
+            <div class="slds-form_row">
+                <BR/>
+                <div class="slds-form_row"> 
+                        <div class="slds-box slds-box_xx-small 
+                                    header1 slds-align_absolute-center">
+                            
+                            <p class="slds-text-color_inverse">View Prime Details</p>
+                            
+                        </div>
+                </div>
+                <BR/>
+                <div class="slds-form__row">
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label slds-align_absolute-center common_font">Statement Date</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Card Status</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">NORM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Credit Limt</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber value="7000" style="decimal" minimumFractionDigits="2"/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked">
+                            <label class="slds-form-element__label common_font" aura:id="TAD">Last Stmt Total Amt Due(TAD) </label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Last Stmt Min Amt Due(MAD)</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Current OutStanding</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked">
+                            <label class="slds-form-element__label common_font">Last Payment Received </label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Payment Date</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Payment Stmt Bal Due</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked">
+                            <label class="slds-form-element__label common_font">Avail Credit Limit</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Total Credit Limit</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Payment Due Date</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked">
+                            <label class="slds-form-element__label common_font">Total Cash Limit</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Mode of Last Payment Mode</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form__item slds-form_horizontal" role="listitem">
+                        <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
+                            <label class="slds-form-element__label common_font">Avail Cash Limit</label>
+                            <div class="slds-form-element__control slds-form-element__readonly">
+                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-form_row slds-size_1-of-2">
+                    <BR/>
+                    <div class="slds-form_row"> 
+                        <div class="slds-box slds-box_xx-small 
+                                    header2 slds-align_absolute-center">
+                            
+                            <p class="slds-text-color_inverse">Reward Points Balance as per last Statement</p>
+                            
+                        </div>
+                    </div>
+                    <BR/>
+                    <div class="slds-form__row">
+                        <div class="slds-form__item slds-form_horizontal" role="listitem">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <label class="slds-form-element__label common_font">Opening Balance</label>
+                                <div class="slds-form-element__control slds-form-element__readonly">
+                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                	</div>
+                    <div class="slds-form__row">
+                        <div class="slds-form__item slds-form_horizontal" role="listitem">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <label class="slds-form-element__label common_font">Redeemed</label>
+                                <div class="slds-form-element__control slds-form-element__readonly">
+                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                	</div>
+                    <div class="slds-form__row">
+                        <div class="slds-form__item slds-form_horizontal" role="listitem">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <label class="slds-form-element__label common_font">Earned</label>
+                                <div class="slds-form-element__control slds-form-element__readonly">
+                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                	</div>
+                    <div class="slds-form__row">
+                        <div class="slds-form__item slds-form_horizontal" role="listitem">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <label class="slds-form-element__label common_font">Closing Balance</label>
+                                <div class="slds-form-element__control slds-form-element__readonly">
+                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                	</div>
+               </div>
+                <div class="slds-form_row slds-size_1-of-2">
+                    <BR/>
+                    <div class="slds-form_row"> 
+                        <div class="slds-box slds-box_xx-small 
+                                    header2 slds-align_absolute-center">
+                            
+                            <p class="slds-text-color_inverse">Reward Points Balance as on date</p>
+                            
+                        </div>
+                    </div>
+                    <BR/>
+                    <div class="slds-form__row">
+                        <div class="slds-form__item slds-form_horizontal" role="listitem">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <label class="slds-form-element__label common_font">Total Balance</label>
+                                <div class="slds-form-element__control slds-form-element__readonly">
+                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                	</div>
+                    <div class="slds-form__row">
+                        <div class="slds-form__item slds-form_horizontal" role="listitem">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <label class="slds-form-element__label common_font">Total Redeemed</label>
+                                <div class="slds-form-element__control slds-form-element__readonly">
+                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                	</div>
+               </div>
+            </div>
+            <BR/>
+            <BR/>
+            <BR/>
+        </div>
+    </div>
+    <aura:if isTrue="{!v.blnSpinnerShow}">
+        <lightning:spinner aura:id="Spinner" alternativeText="Loading" variant="brand" class="spinner__container" />
+    </aura:if>
+</aura:component>

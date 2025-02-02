@@ -1,0 +1,43 @@
+<aura:component controller='SimpleServerSideController'>
+    <aura:attribute name="num1" type="Integer" default="10"/>
+    <aura:attribute name="num2" type="Integer" default="20"/>
+    <aura:attribute name="sum" type="Integer"/>
+    {!v.num1}+{!v.num2}={!v.sum}
+    <br></br>
+    <ui:button label="Add Numbers" press="{!c.addNumber}" />
+	<h1>Hello Saurabh</h1>
+    <div>
+    	<div class='red'>I am red</div>
+        <div class='blue'>I am blue</div>
+        <div class='green'>I am green</div>
+        <ltng:require styles="/resource/bootstrap"/>
+        <div class='myBootstrap'>
+        Hello
+        </div>
+    </div>
+
+    <ui:button label='Display Number' press="{!c.getNumbers}"/>
+    <aura:iteration var='num' items="{!v.num}">
+    {!num.value}
+    </aura:iteration>
+    <ui:inputText label="First Name" aura:Id="firstname" placeholder="Enter Your Name"/>
+    <ui:inputText label="Last Name" aura:Id="LastName" placeholder="Enter Your Name"/>
+    <ui:outputText aura:id="nameOutput" value=""/>
+    <ui:button aura:id="buttonid" label="Hit me!!" press="{!c.getName}"/>
+    <aura:attribute name='text' type='string' default='Just Saying hello'/>
+    <br></br>
+    <input type="button" value="Hybrid HTML Button" onclick="{!c.handleClick}"/>
+    <br></br>
+    <ui:button label="Framework Button" press="{!c.handleClick}"/>
+    <br></br>
+    {!v.text}
+    <br></br>
+    <aura:attribute name='FirstName' type='String' default='Saurabh'/>
+    <ui:button label="Call Server" press="{!c.echo}"/>
+    <br></br>
+    <aura:attribute name='Opportunity' type='Opportunity[]'/>
+    <ui:button label='Call me' press='{!c.getOpps}'/>
+    <aura:iteration var='opportunity' items='{!v.Opportunity}'>
+    	<p>{!opportunity.Name}</p>
+    </aura:iteration>
+</aura:component>

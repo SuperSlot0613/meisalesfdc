@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Product_Invoice__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Total of all Invoice</inlineHelpText>
+    <label>Total Product Invoice</label>
+    <summarizedField>Invoice_Product__c.Total_Price__c</summarizedField>
+    <summaryForeignKey>Invoice_Product__c.Invoice__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,6 @@
+Dear {!Lead.Salutation} {!Lead.Name},
+
+We are removing your Lead from system because no update from your side. The lead related to {!Lead.Product__c}.This is lead id {!Lead.Lead_ID__c} for your future communication.
+
+Thanks Regards,
+FInvoice

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AP</fullName>
+        <default>false</default>
+        <label>AP</label>
+    </customValue>
+    <customValue>
+        <fullName>Assam</fullName>
+        <default>false</default>
+        <label>Assam</label>
+    </customValue>
+    <customValue>
+        <fullName>Bihar</fullName>
+        <default>false</default>
+        <label>Bihar</label>
+    </customValue>
+    <customValue>
+        <fullName>HP</fullName>
+        <default>false</default>
+        <label>HP</label>
+    </customValue>
+    <customValue>
+        <fullName>Maharashtra</fullName>
+        <default>false</default>
+        <label>Maharashtra</label>
+    </customValue>
+    <customValue>
+        <fullName>MP</fullName>
+        <default>false</default>
+        <label>MP</label>
+    </customValue>
+    <customValue>
+        <fullName>UK</fullName>
+        <default>false</default>
+        <label>UK</label>
+    </customValue>
+    <customValue>
+        <fullName>UP</fullName>
+        <default>false</default>
+        <label>UP</label>
+    </customValue>
+    <customValue>
+        <fullName>West Bengal</fullName>
+        <default>false</default>
+        <label>West Bengal</label>
+    </customValue>
+    <masterLabel>State</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

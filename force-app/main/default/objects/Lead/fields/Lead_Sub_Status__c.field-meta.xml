@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Sub_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Sub Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer dropped</fullName>
+                <default>false</default>
+                <label>Customer dropped</label>
+            </value>
+            <value>
+                <fullName>Queue</fullName>
+                <default>false</default>
+                <label>Queue</label>
+            </value>
+            <value>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+                <label>Follow Up</label>
+            </value>
+            <value>
+                <fullName>Logged In</fullName>
+                <default>false</default>
+                <label>Logged In</label>
+            </value>
+            <value>
+                <fullName>New Query</fullName>
+                <default>false</default>
+                <label>New Query</label>
+            </value>
+            <value>
+                <fullName>QDE Pending</fullName>
+                <default>false</default>
+                <label>QDE Pending</label>
+            </value>
+            <value>
+                <fullName>Offer generated</fullName>
+                <default>false</default>
+                <label>Offer generated</label>
+            </value>
+            <value>
+                <fullName>VKYC Initiation Pending</fullName>
+                <default>false</default>
+                <label>VKYC Initiation Pending</label>
+            </value>
+            <value>
+                <fullName>VKYC Initiated</fullName>
+                <default>false</default>
+                <label>VKYC Initiated</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>DDE Pending</fullName>
+                <default>false</default>
+                <label>DDE Pending</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>VKYC</controllingFieldValue>
+            <valueName>VKYC Initiated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Contact Center</controllingFieldValue>
+            <valueName>New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>DDE</controllingFieldValue>
+            <valueName>DDE Pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit/Ops</controllingFieldValue>
+            <controllingFieldValue>Contact Center</controllingFieldValue>
+            <valueName>Logged In</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit/Ops</controllingFieldValue>
+            <controllingFieldValue>Contact Center</controllingFieldValue>
+            <valueName>New Query</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit/Ops</controllingFieldValue>
+            <controllingFieldValue>QDE</controllingFieldValue>
+            <valueName>QDE Pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit/Ops</controllingFieldValue>
+            <controllingFieldValue>QDE</controllingFieldValue>
+            <valueName>Offer generated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact Center</controllingFieldValue>
+            <valueName>Customer dropped</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact Center</controllingFieldValue>
+            <valueName>Queue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact Center</controllingFieldValue>
+            <valueName>Follow Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VKYC</controllingFieldValue>
+            <valueName>VKYC Initiation Pending</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

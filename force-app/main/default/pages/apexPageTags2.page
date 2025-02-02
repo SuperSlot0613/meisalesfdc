@@ -1,0 +1,22 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:form >
+      <apex:pageBlock title="First Block">
+          <apex:pageBlockSection title="First Section">
+              <apex:pageBlockSectionItem >My Name is Saurabh</apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >Salesforce Admin</apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >Salesforce Developer</apex:pageBlockSectionItem>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Second Section">
+              <apex:pageBlockSectionItem >My Name is Saurabh</apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >Salesforce Admin</apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >Salesforce Developer</apex:pageBlockSectionItem>
+          </apex:pageBlockSection>
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Save"/>
+              <apex:commandButton value="Cancel"/>
+          </apex:pageBlockButtons>
+      </apex:pageBlock>
+  </apex:form>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

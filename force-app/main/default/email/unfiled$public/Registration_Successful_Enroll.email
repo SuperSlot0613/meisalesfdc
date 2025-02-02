@@ -1,0 +1,10 @@
+Hello {!Student__c.Student_Name__c}
+
+Greetings.
+
+Congratulations on Successfully getting registered for {!Student__c.Course_Opted__c} course.
+
+Hope you have a great journey ahead.
+
+Regards,
+Team SuperSlot

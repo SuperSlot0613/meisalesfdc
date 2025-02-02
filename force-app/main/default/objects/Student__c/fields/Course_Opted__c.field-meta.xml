@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_Opted__c</fullName>
+    <externalId>false</externalId>
+    <label>Course Opted</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Stream_Opted__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adv Java</fullName>
+                <default>false</default>
+                <label>Adv Java</label>
+            </value>
+            <value>
+                <fullName>Amazon AWS</fullName>
+                <default>false</default>
+                <label>Amazon AWS</label>
+            </value>
+            <value>
+                <fullName>Android App Development</fullName>
+                <default>false</default>
+                <label>Android App Development</label>
+            </value>
+            <value>
+                <fullName>C++</fullName>
+                <default>false</default>
+                <label>C++</label>
+            </value>
+            <value>
+                <fullName>Core Java</fullName>
+                <default>false</default>
+                <label>Core Java</label>
+            </value>
+            <value>
+                <fullName>IOS</fullName>
+                <default>false</default>
+                <label>IOS</label>
+            </value>
+            <value>
+                <fullName>MERN Stack</fullName>
+                <default>false</default>
+                <label>MERN Stack</label>
+            </value>
+            <value>
+                <fullName>PHP</fullName>
+                <default>false</default>
+                <label>PHP</label>
+            </value>
+            <value>
+                <fullName>Python</fullName>
+                <default>false</default>
+                <label>Python</label>
+            </value>
+            <value>
+                <fullName>Salesforce Admin</fullName>
+                <default>false</default>
+                <label>Salesforce Admin</label>
+            </value>
+            <value>
+                <fullName>Salesforce Developer</fullName>
+                <default>false</default>
+                <label>Salesforce Developer</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>C++</controllingFieldValue>
+            <valueName>C++</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Core Programming</controllingFieldValue>
+            <controllingFieldValue>Java</controllingFieldValue>
+            <valueName>Adv Java</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Core Programming</controllingFieldValue>
+            <controllingFieldValue>Java</controllingFieldValue>
+            <valueName>Core Java</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Core Programming</controllingFieldValue>
+            <controllingFieldValue>MERN</controllingFieldValue>
+            <valueName>MERN Stack</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Core Programming</controllingFieldValue>
+            <controllingFieldValue>PHP</controllingFieldValue>
+            <valueName>PHP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Core Programming</controllingFieldValue>
+            <controllingFieldValue>PHP</controllingFieldValue>
+            <valueName>Python</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
