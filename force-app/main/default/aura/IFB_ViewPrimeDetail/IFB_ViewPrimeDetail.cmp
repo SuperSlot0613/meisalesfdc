@@ -1,11 +1,12 @@
-<aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:isUrlAddressable" access="global" >
+<aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:isUrlAddressable" access="global" controller='IFB_ViewPrimeDetailsController' >
     <aura:attribute name="recordId" type="String"/>
     <aura:attribute name="cardserno" type="String"/>
-    <aura:attribute name="CurrenteUser" type="Object"/>
     <aura:attribute name="error_disply" type="Boolean" default="false"/>
     <aura:attribute name="blnSpinnerShow" type="Boolean" default="false"/>
     <aura:attribute name="errormsg" type="String" default=""/>
-    <force:recordData recordId="{!$SObjestType.CurrentUser.Id}" fields="Profile.Name" targetFields="{!v.CurrenteUser}"/>
+    
+    <aura:attribute name="CurrenteUser" type="Object"/>
+    <force:recordData recordId="{!$SObjectType.CurrentUser.Id}" fields="Profile.Name" targetFields="{!v.CurrenteUser}"/>
 
     <lightning:workspaceAPI aura:id="workspace"/>
     <lightning:notificationsLibrary aura:id="notifLib"/>
@@ -256,7 +257,10 @@
             </div>
             <BR/>
             <BR/>
-            <BR/>
+            <div class="slds-align_absolute-center">
+                <lightning:button class="slds-button slds-button_neutral" label="Close Details" onclick="{!c.closeT}"></lightning:button>
+            </div>
+            <br/>
         </div>
     </div>
     <aura:if isTrue="{!v.blnSpinnerShow}">

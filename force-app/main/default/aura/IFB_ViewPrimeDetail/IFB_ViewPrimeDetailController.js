@@ -8,8 +8,11 @@
 		var recordId=parseUrl.searchParams.get("c__recordId");
 		var serno=parseUrl.searchParams.get("c__sn");
 		console.log("This is serno number",serno);
+        console.log("This is record id",recordId);
+        component.set("v.recordId",recordId);
+        component.set("v.cardserno",serno);
 
-		var workspaceAPI=component.find("workspace");
+	    var workspaceAPI=component.find("workspace");
 		workspaceAPI.getFocusedTabInfo().then(function(response){
 			var focusedTabId=response.tabId;
 			workspaceAPI.setTabLabel({
@@ -22,9 +25,21 @@
 				iconAlt:"Details"
 			});
 		}).catch(function(error){
-			console.log(error);
-		})
+			console.log("This is error coming",error);
+		});
+        console.log("Setting open Tab UI");
         component.set("v.blnSpinnerShow",false);
+        helper.getPrimeDetails(component,event,helper);
 
-	}
+	},
+    
+    closeT : function(component,event,helper){
+        var workspaceAPI=component.find("workspace");
+		workspaceAPI.getFocusedTabInfo().then(function(response){
+			var focusedTabId=response.tabId;
+            workspaceAPI.closeTab({tabId:focusedTabId});
+		}).catch(function(error){
+			console.log("This is error coming",error);
+		});
+    }
 })
