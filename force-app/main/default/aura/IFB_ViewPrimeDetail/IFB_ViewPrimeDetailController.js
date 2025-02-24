@@ -3,12 +3,11 @@
         component.set("v.blnSpinnerShow",true);
 		var pagerefrence=component.get("v.pageReference");
         var currentuser=component.get("v.CurrenteUser");
-        console.log("This is current user",currentuser)
 		var parseUrl=new URL(window.location.href);
 		var recordId=parseUrl.searchParams.get("c__recordId");
 		var serno=parseUrl.searchParams.get("c__sn");
-		console.log("This is serno number",serno);
-        console.log("This is record id",recordId);
+		//console.log("This is serno number",serno);
+        //console.log("This is record id",recordId);
         component.set("v.recordId",recordId);
         component.set("v.cardserno",serno);
 
@@ -27,8 +26,8 @@
 		}).catch(function(error){
 			console.log("This is error coming",error);
 		});
-        console.log("Setting open Tab UI");
-        component.set("v.blnSpinnerShow",false);
+        //console.log("Setting open Tab UI");
+        //component.set("v.blnSpinnerShow",false);
         helper.getPrimeDetails(component,event,helper);
 
 	},

@@ -4,6 +4,11 @@
     <aura:attribute name="error_disply" type="Boolean" default="false"/>
     <aura:attribute name="blnSpinnerShow" type="Boolean" default="false"/>
     <aura:attribute name="errormsg" type="String" default=""/>
+    <aura:attribute name="strAccountSerNo" type="String" default=""/>
+    <aura:attribute name="data" type="IFB_ViewPrimeDetailsWrapper"/>
+    <aura:attribute name="showDetails" type="Boolean" default="true"/>
+    <aura:attribute name="errorMessage" type="String" default=""/>
+    <aura:attribute name="rewardRes" type="IFB_getRewardsResWrapper"/>
     
     <aura:attribute name="CurrenteUser" type="Object"/>
     <force:recordData recordId="{!$SObjectType.CurrentUser.Id}" fields="Profile.Name" targetFields="{!v.CurrenteUser}"/>
@@ -33,7 +38,7 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label slds-align_absolute-center common_font">Statement Date</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                                <div class="slds-form-element__static common_font">{!v.data.stmtDate}</div>
                             </div>
                         </div>
                     </div>
@@ -41,7 +46,7 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label common_font">Card Status</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">NORM</div>
+                                <div class="slds-form-element__static common_font">{!v.data.cardStatus}</div>
                             </div>
                         </div>
                     </div>
@@ -59,7 +64,7 @@
                         <div class="slds-form-element slds-form-element_stacked">
                             <label class="slds-form-element__label common_font" aura:id="TAD">Last Stmt Total Amt Due(TAD) </label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.data.strTAD}" style="decimal" minimumFractionDigits="2"/></div>
                             </div>
                             
                         </div>
@@ -68,7 +73,7 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label common_font">Last Stmt Min Amt Due(MAD)</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.data.strMAD}" style="decimal" minimumFractionDigits="2"/></div>
                             </div>
                         </div>
                     </div>
@@ -76,7 +81,7 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label common_font">Current OutStanding</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.data.currOutstanding}" style="decimal" minimumFractionDigits="2"/></div>
                             </div>
                         </div>
                     </div>
@@ -86,7 +91,7 @@
                         <div class="slds-form-element slds-form-element_stacked">
                             <label class="slds-form-element__label common_font">Last Payment Received </label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.data.lstAmt}" style="decimal" minimumFractionDigits="2"/></div>
                             </div>
                             
                         </div>
@@ -95,13 +100,13 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label common_font">Payment Date</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                                <div class="slds-form-element__static common_font">{!v.data.paymentDt}</div>
                             </div>
                         </div>
                     </div>
                     <div class="slds-form__item slds-form_horizontal" role="listitem">
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
-                            <label class="slds-form-element__label common_font">Payment Stmt Bal Due</label>
+                            <label class="slds-form-element__label common_font">Remaining Stmt Bal Due</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
                                 <div class="slds-form-element__static common_font">20/02/2061</div>
                             </div>
@@ -113,7 +118,7 @@
                         <div class="slds-form-element slds-form-element_stacked">
                             <label class="slds-form-element__label common_font">Avail Credit Limit</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.data.availcredit}" style="decimal" minimumFractionDigits="2"/></div>
                             </div>
                             
                         </div>
@@ -122,7 +127,7 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label common_font">Total Credit Limit</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.data.totalCredLimit}" style="decimal" minimumFractionDigits="2"/></div>
                             </div>
                         </div>
                     </div>
@@ -130,7 +135,7 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label common_font">Payment Due Date</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                                <div class="slds-form-element__static common_font">{!v.data.paymentDueDt}</div>
                             </div>
                         </div>
                     </div>
@@ -149,7 +154,7 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label common_font">Mode of Last Payment Mode</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                                <div class="slds-form-element__static common_font">{!v.data.modeOfPayment}</div>
                             </div>
                         </div>
                     </div>
@@ -157,7 +162,7 @@
                         <div class="slds-form-element slds-form-element_stacked slds-form_horizontal">
                             <label class="slds-form-element__label common_font">Avail Cash Limit</label>
                             <div class="slds-form-element__control slds-form-element__readonly">
-                                <div class="slds-form-element__static common_font">20/02/2061</div>
+                                <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.data.availcredit}" style="decimal" minimumFractionDigits="2"/></div>
                             </div>
                         </div>
                     </div>
@@ -236,7 +241,7 @@
                             <div class="slds-form-element slds-form-element_stacked">
                                 <label class="slds-form-element__label common_font">Total Balance</label>
                                 <div class="slds-form-element__control slds-form-element__readonly">
-                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.rewardRes.balancePts}" style="decimal" minimumFractionDigits="2"/></div>
                                 </div>
                                 
                             </div>
@@ -247,7 +252,7 @@
                             <div class="slds-form-element slds-form-element_stacked">
                                 <label class="slds-form-element__label common_font">Total Redeemed</label>
                                 <div class="slds-form-element__control slds-form-element__readonly">
-                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="45492" style="decimal" minimumFractionDigits="2"/></div>
+                                    <div class="slds-form-element__static common_font"><lightning:formattedNumber  value="{!v.rewardRes.totalReedemed}" style="decimal" minimumFractionDigits="2"/></div>
                                 </div>
                                 
                             </div>
